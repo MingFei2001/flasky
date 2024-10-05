@@ -1,10 +1,9 @@
-<!-- Homepage for the application -->
+<!-- Jinja - Extend based on the layout.html -->
+<!-- copy from below here -->
 {% extends "layout.html" %}
 
 <!-- page title -->
-{% block title %}
-My Homepage
-{% endblock %}
+{% block title %}{% endblock %}
 
 <!-- extras header -->
 {% block head %}
@@ -20,8 +19,6 @@ My Homepage
 {% block body %}
 {{ super() }} <!-- render parent block content -->
 <!-- add to the body content -->
-<h1 class="display-4 text-center">Flasky CRUD Template</h1>
-<p class="fst-italic fw-bold text-center">This is the homepage of the template</h2>
 {% endblock %}
 
 <!-- footer -->
