@@ -2,6 +2,8 @@ from flask import Flask, url_for, render_template, redirect
 
 app = Flask(__name__)
 
+# Route for each pages
+# TODO: move this out into another file
 @app.route('/')
 def index():
     return render_template("index.html")
@@ -22,4 +24,6 @@ def dashboard():
 def template():
     return render_template("template.html")
 
-app.run(debug=True)
+# Only run if this file not used as a lib
+if __name__ == "__main__":
+    app.run(debug=True)
